@@ -1,0 +1,7 @@
+uvicorn
+polars
+fastapi
+requests
+duckdb
+httpx
+streamlit
