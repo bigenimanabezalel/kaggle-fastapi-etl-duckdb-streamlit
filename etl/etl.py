@@ -115,7 +115,7 @@ async def run_etl() -> None:
     1. Extract: fetch all four endpoints concurrently via asyncio
     2. Load:    persist each DataFrame into DuckDB
     """
-    print("=" * 60)
+    print("=" * 60) 
     print("Starting ETL pipeline")
     print("=" * 60)
 

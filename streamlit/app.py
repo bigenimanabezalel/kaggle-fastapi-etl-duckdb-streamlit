@@ -161,3 +161,18 @@ st.caption(
     "Data sourced from Kaggle · Served by FastAPI · Stored in DuckDB · "
     "Queried with Polars SQLContext"
 )
+
+"""
+Section 3
+"""
+
+st.divider()
+
+uploader = st.file_uploader(label="Upload a file:", type=["csv", "json", "parquet"])
+
+if uploader is not None:
+    string_io_value = uploader.getvalue()
+    
+    df =pl.read_csv(source=string_io_value)
+    
+st.dataframe(df, use_container_width=True)
